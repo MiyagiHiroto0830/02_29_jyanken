@@ -1,0 +1,225 @@
+html{
+    height: 100%;
+}
+
+
+.body1 {
+    background-image: url(../img/img-vs@2x.png);
+    background-size: auto;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    position: relative;
+  
+    
+
+}
+
+.btn1{
+    position: absolute;
+    bottom: 240px;
+    right:630px;
+    
+}
+/* ここから二枚目 */
+.body2{
+    background-color: black;
+    height: 100%;
+    position: relative;
+}
+.rule{
+    text-align: center;
+    background-color: blanchedalmond;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+}
+/* ここから三枚目 */
+.body3{
+    height: 100%;
+    position: relative;
+    
+    
+    
+}
+
+.gubtn{
+    position: absolute;
+    bottom:15px;
+    left:100px;
+}
+
+.pabtn{
+    position: absolute;
+    bottom:15px;
+    right: 100px;
+}
+
+.tyokibtn{
+    position: absolute;
+    bottom:15px;
+    right: 592px;
+}
+
+.g-logo{
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    top:360px;
+}
+.s-logo{
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    top:360px;
+    right:0;
+}
+.gimgbox{
+    position: absolute;
+    left: 0;
+    top:50px;
+   
+    
+   
+}
+.gimgbox img{
+    width: auto;
+    height: 220px;
+    object-fit: cover;  
+}
+.himgbox{
+    right: 0;
+    position: absolute;
+    top:50px;
+}
+.himgbox img{
+    width: auto;
+    height: 220px;
+    object-fit: cover;  
+}
+ .point1{
+     height: 180px;
+     width: 180px;
+     position: absolute;
+     top:360px;
+     left:500px;
+ }
+ .point1 p{
+     font-size: 60px;
+ }
+
+ .point2{
+     height: 180px;
+     width: 180px;
+     position: absolute;
+     top:360px;
+     right:500px;
+     text-align: center;
+ }
+ .point2 p{
+     font-size: 60px;
+ }
+ 
+ h1{
+     font-size: 30px;
+     text-align: center;
+ }
+ .text{
+     text-align: center;
+     font-size: 30px;
+ }
+ .title{
+     text-align: center;
+     font-size: 30px;
+     
+ }
+.choice{
+    text-align: center;
+}
+
+ .gcount{
+     position: absolute;
+     top:300px;
+     left:100px;
+     font-size: 30px;
+ }
+ .hcount{
+      position: absolute;
+     top:300px;
+     right:100px;
+     font-size: 30px;
+ }
+.imgimg{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.maru{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    visibility: hidden;
+}
+
+.body4 {
+    background-image: url(../img/hqdefault.jpg);
+    background-size: auto;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    position: relative;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+.button{
+    
+    position: absolute;
+    bottom:80px;
+    left: 650px;
+    width: 150px;
+    height: 100px;
+    font-size: 20px;
+    background-color: tomato;
+}
+.clickimg{
+    
+    position: relative;
+}
+.clickimg img{
+    position: absolute;
+    top:200px;
+    left:345px;
+}
+.video{
+    position: relative;
+}
+.button2{
+    position: absolute;
+    bottom:80px;
+    left: 650px;
+    width: 150px;
+    height: 100px;
+    font-size: 20px;
+    background-color: tomato;
+}
+.clickimg2{
+    background-color: black;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+.button3{
+    position: absolute;
+     bottom:80px;
+    left: 650px;
+    width: 150px;
+    height: 100px;
+    font-size: 20px;
+}

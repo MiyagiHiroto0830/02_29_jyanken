@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>日本シリーズ2</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body class="body3">
+
+
+    <div id="screen">
+        <img id="gubtn" class="gubtn" src="img/illustkun-00070-rock-paper-scissors.png">
+        <img id="pabtn" class="pabtn" src="img/illustkun-00072-rock-paper-scissors.png">
+        <img id="tyokibtn" class="tyokibtn" src="img/illustkun-00071-rock-paper-scissors.png">
+        <img class="g-logo" src="img/201712120038_ex.png">
+        <img class="s-logo" src="img/logo01.jpg">
+
+        <div class="point1">
+            <p id="point1">得点</p>
+        </div>
+
+        <div class="point2">
+            <p id="point2">得点</p>
+        </div>
+        <p class="title" id="title">日本シリーズ</p>
+        <h1>ホークスが選んだのは？</h1>
+        <p class="choice" id="choice"></p>
+        <p class="text" id="text"></p>
+
+
+
+        <div id="id"></div>
+        <p class="gcount" id="gcount">0勝</p>
+        <p class="hcount" id="hcount">0勝</p>
+        <div id="gimgbox" class="gimgbox">
+            <img id="gimg1" src="img/0db173431dbd863a6267f030228bb02d.jpg" alt="">
+            <img id="gimg2" src="img/ダウンロード.jpeg">
+            <img id="gimg3" src="img/85142404b0abf41caed0040f226bb461.jpg">
+            <img id="gimg4" src="img/IMG_3640.jpg">
+        </div>
+        <div id="himgbox" class="himgbox">
+            <img id="himg1" src="img/IMG_7288.jpg" alt="">
+            <img id="himg2" src="img/IMG_6145.jpg">
+            <img id="himg3" src="img/f95f4906080e3849520c9d1dda11bd19.jpg">
+            <img id="himg4" src="img/IMG_5681.jpg">
+        </div>
+
+        <audio id="DiceSound" preload="auto">
+            <source src="img/【ドラクエ】レベルアップ音.mp3" type="audio/wav">
+        </audio>
+
+
+        <audio id="DiceSound2" preload="auto">
+            <source src="img/thief-boy-lose1 (1).mp3" type="audio/wav">
+        </audio>
+
+        <audio id="DiceSound3" preload="auto">
+            <source src="img/_game_witch-win1.mp3" type="audio/wav">
+
+        </audio>
+
+
+
+
+
+    </div>
+
+
+
+    <video id="video" class="video" src="img/y2mate.com - 【プロ野球】2020年 巨人 優勝 胴上げ  読売ジャイアンツ 4.MP4"
+        style="width:1440px ;height:900px"></video>
+    <input class="button2" id="button2" type="button" value="最初に戻る" onclick="location.href='index.html'">
+
+    <div id="clickimg" class="clickimg" style="width:1440px ;height:900px">
+
+        <img src="img/lo7090hf.png">
+
+
+
+
+        <input class="button" id="button" type="button" value="クリック">
+    </div>
+
+    <div id="clickimg2" class="clickimg2">
+
+        <div class="rule">
+            <p>ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえない。ホークスが優勝することはありえないホークスが優勝することはありえないホークスが優勝することはありえないホークスが優勝することはありえないホークスが優勝することはありえないホークスが優勝することはありえないホークスが優勝することはありえないホークスが優勝することはありえないホークスが優勝することはありえない
+            </p>
+
+        </div>
+        <input class="button3" id="button3" type="button" value="最初から" onclick="location.href='index.html'">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+
+
+
+            $("#gubtn").on("click", function () {
+
+                let random = Math.floor(Math.random() * 9 + 1);
+                let point1 = Math.floor(Math.random() * 10 + 5);
+                let point2 = Math.floor(Math.random() * 2 + 2);
+                let point3 = Math.floor(Math.random() * 1);
+
+
+
+                if (random <= 4) {
+                    $("#choice").text("チョキ");
+                    $("#text").text("ジャイアンツの勝利")
+                    $("#point1").text(point1);
+                    $("#point2").text(point2);
+                    gwin();
+                    lotation();
+
+
+
+
+
+
+
+                } else if (random == 5) {
+                    $("#choice").text("グー");
+                    $("#text").text("引き分け");
+                    $("#point1").text(3);
+                    $("#point2").text(3);
+                    drow();
+                    lotation();
+
+
+                } else {
+                    $("#choice").text("パー");
+                    $("#text").text("ホークスの勝利")
+                    $("#point1").text(point3);
+                    $("#point2").text(point2);
+                    hwin();
+                    lotation();
+
+
+                }
+
+            });
+
+
+            $("#pabtn").on("click", function () {
+
+                let random = Math.floor(Math.random() * 9 + 1);
+                let point1 = Math.floor(Math.random() * 10 + 5);
+                let point2 = Math.floor(Math.random() * 2 + 2);
+                let point3 = Math.floor(Math.random() * 1);
+
+
+                if (random <= 4) {
+                    $("#choice").text("グー");
+                    $("#text").text("ジャイアンツの勝利")
+                    $("#point1").text(point1);
+                    $("#point2").text(point2);
+                    gwin();
+                    lotation();
+
+                } else if (random == 5) {
+                    $("#choice").text("パー");
+                    $("#text").text("引き分け");
+                    $("#point1").text(1);
+                    $("#point2").text(1);
+                    drow();
+                    lotation();
+
+                } else {
+                    $("#choice").text("チョキ");
+                    $("#text").text("ホークスの勝利")
+                    $("#point1").text(point3);
+                    $("#point2").text(point2);
+                    hwin();
+                    lotation();
+                }
+
+
+
+
+            });
+
+
+
+            $("#tyokibtn").on("click", function () {
+
+                let random = Math.floor(Math.random() * 9 + 1);
+                let point1 = Math.floor(Math.random() * 10 + 5);
+                let point2 = Math.floor(Math.random() * 2 + 2);
+                let point3 = Math.floor(Math.random() * 1);
+
+
+                if (random <= 4) {
+                    $("#choice").text("パー");
+                    $("#text").text("ジャイアンツの勝利")
+                    $("#point1").text(point1);
+                    $("#point2").text(point2);
+                    gwin();
+                    lotation();
+                } else if (random == 5) {
+                    $("#choice").text("チョキ");
+                    $("#text").text("引き分け");
+                    $("#point1").text(5);
+                    $("#point2").text(5);
+                    drow();
+                    lotation();
+
+                } else {
+                    $("#choice").text("グー");
+                    $("#text").text("ホークスの勝利");
+                    $("#point1").text(point3);
+                    $("#point2").text(point2);
+                    hwin();
+                    lotation();
+                }
+
+            });
+            $("#clickimg").hide();
+            $("#clickimg2").hide();
+            var count = 1;
+            var gcount = 0;
+            var hcount = 0;
+
+            // 巨人の勝利
+            function gwin() {
+                gcount++;
+                console.log(gcount);
+                $("#gcount").text(gcount + "勝");
+                $("#DiceSound")[0].play();
+
+
+                if (gcount == 4) {
+                    $("#gcount").text("優勝");
+
+                    $("#screen").fadeOut(0);
+                    $("#clickimg").show();
+                }
+            }
+            //    ホークス勝利
+            function hwin() {
+                hcount++;
+                $("#hcount").text(hcount + "勝");
+                $("#DiceSound2")[0].play();
+
+                if (hcount == 4) {
+                    $("#screen").fadeOut(0);
+                    $("#clickimg2").show();
+                }
+            }
+            // 同点
+            function drow() {
+                $("#DiceSound3")[0].play();
+
+            }
+
+
+
+
+
+            $("#button").on("click", function () {
+                $("#video").show();
+                $('#video')[0].play();
+
+                $("#clickimg").hide();
+            });
+
+            $("#button2").hide();
+            $("#video").on("ended", function () {
+                $("#button2").show();
+
+            });
+
+
+
+
+
+
+
+            $("#gimg1").hide();
+            $("#himg1").hide();
+            $("#gimg2").hide();
+            $("#gimg3").hide();
+            $("#gimg4").hide();
+            $("#himg2").hide();
+            $("#himg3").hide();
+            $("#himg4").hide();
+
+
+            //   先発ローテ
+            function lotation() {
+                $("#title").text(count + "試合目");
+
+                count++;
+                if (count == 2) {
+                    $("#gimg1").show();
+                    $("#himg1").show();
+                }
+                else if (count == 3) {
+                    $("#gimg1").hide();
+                    $("#gimg2").show();
+                    $("#himg1").hide();
+                    $("#himg2").show();
+                }
+                else if (count == 4) {
+                    $("#gimg2").hide();
+                    $("#gimg3").show();
+                    $("#himg2").hide();
+                    $("#himg3").show();
+                }
+                else if (count == 5) {
+                    $("#gimg3").hide();
+                    $("#gimg4").show();
+                    $("#himg3").hide();
+                    $("#himg4").show();
+                }
+                else if (count == 6) {
+                    $("#gimg4").hide();
+                    $("#gimg1").show();
+                    $("#himg4").hide();
+                    $("#himg1").show();
+                }
+                else if (count == 7) {
+                    $("#gimg1").hide();
+                    $("#gimg2").show();
+                    $("#himg1").hide();
+                    $("#himg2").show();
+                }
+                else if (count == 8) {
+                    $("#gimg2").hide();
+                    $("#gimg3").show();
+                    $("#himg2").hide();
+                    $("#himg3").show();
+                }
+                else if (count == 9) {
+                    $("#gimg3").hide();
+                    $("#gimg4").show();
+                    $("#himg3").hide();
+                    $("#himg4").show();
+                }
+                else if (count == 10) {
+                    $("#gimg4").hide();
+                    $("#gimg1").show();
+                    $("#himg4").hide();
+                    $("#himg1").show();
+                }
+                else if (count == 10) {
+                    $("#gimg1").hide();
+                    $("#gimg2").show();
+                    $("#himg1").hide();
+                    $("#himg2").show();
+                }
+                else if (count == 10) {
+                    $("#gimg2").hide();
+                    $("#gimg3").show();
+                    $("#himg2").hide();
+                    $("#himg3").show();
+                }
+                else if (count == 10) {
+                    $("#gimg3").hide();
+                    $("#gimg4").show();
+                    $("#himg3").hide();
+                    $("#himg4").show();
+                }
+
+                else {
+                    $("#gimg4").hide();
+                    $("#gimg1").show();
+                    $("#himg4").hide();
+                    $("#himg1").show();
+                }
+
+
+            }
+
+
+
+
+
+
+
+
+            $("#video").hide();
+
+
+
+            const audio = document.getElementById("DiceSound");
+            audio.volume = 0.01;
+            const audio1 = document.getElementById("DiceSound2");
+            audio1.volume = 0.01;
+            const audio2 = document.getElementById("DiceSound3");
+            audio2.volume = 0.01;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
